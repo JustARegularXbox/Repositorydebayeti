@@ -24,7 +24,7 @@ int main() {
   map<unsigned short, pair <unsigned short, unsigned short>> shift;
   createMap(shift);
 
-  ifstream in("ascii");
+  ifstream in("ascii.log");
   ofstream out("text");
 
   unsigned short ch;
