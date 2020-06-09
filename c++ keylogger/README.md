@@ -1,6 +1,6 @@
 # C++ Keylogger
 
-## This is a simple c++ keylogger for Windows XP and up
+## This is a simple C++ keylogger for Windows XP and up
 
 *Educational purposes only :)*
 
