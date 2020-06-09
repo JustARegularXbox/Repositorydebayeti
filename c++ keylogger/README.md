@@ -6,7 +6,7 @@
 
 ## How it works:
 
-- **_capture.cpp_** stores pressed keys in ascii format in the **_ascii.log_** file
+- **_capture.cpp_** stores pressed keys in ASCII format in the **_ascii.log_** file
 
 - **_decode.cpp_** converts **_ascii.log_** file into human-readable format (filename contains date - for instance: **_09.06.2020_18h.log_**)
 
