@@ -2,9 +2,9 @@
 
 ## This is a simple c++ keylogger for Windows XP and up
 
-**Educational purposes only :)**
+*Educational purposes only :)*
 
-How it works:
+## How it works:
 
 **_capture.cpp_** stores pressed keys in ascii format in the **_ascii_** file
 
