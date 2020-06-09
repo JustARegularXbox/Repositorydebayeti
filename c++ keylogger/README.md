@@ -6,6 +6,6 @@
 
 How it works:
 
-** **"capture.cpp"** ** stores pressed keys in ascii format in ** **"ascii"** ** file
+**_"capture.cpp"_** stores pressed keys in ascii format in **_"ascii"_** file
 
-** **"decode.cpp"** ** converts ** **"ascii"** ** file into readable format (** **"text"** ** file)
+**_"decode.cpp"_** converts **_"ascii"_** file into readable format (**_"text"_** file)
